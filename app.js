@@ -3,9 +3,13 @@ const fs = require('fs');
 fs.writeFile('message.txt','Hello there',(err) =>{
     if(err){
         throw err;
-    console.log('file has been writtedn');    }
+    console.log('file has been writtenn');    }
 });
-console.log("hello");
+console.log("iam doing node js practice with nodemon");
+fs.readFile('./message.txt','UTF8',(err,data) => {
+if(err) throw err;
+console.log(data);
+});
 /* const url = require('url');
 const address  = "https://mail.google.com/mail/?tab=rm&ogbl";
 const parsedUrl = url.parse(address,true,1);
